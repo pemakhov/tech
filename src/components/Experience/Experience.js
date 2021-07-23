@@ -20,7 +20,7 @@ Experience.propTypes = {
   record: PropTypes.shape({
     name: PropTypes.string,
     period: PropTypes.string,
-    technologies: PropTypes,
+    technologies: PropTypes.string,
     scope: PropTypes.string,
     result: PropTypes.string,
   }).isRequired,

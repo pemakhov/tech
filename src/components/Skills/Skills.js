@@ -8,7 +8,7 @@ const Skills = (props) => {
       <h3>{category}</h3>
       <ul>
         {skills.map((skill) => (
-          <li>{skill}</li>
+          <li key={skill}>{skill}</li>
         ))}
       </ul>
     </section>

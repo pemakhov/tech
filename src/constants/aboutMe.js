@@ -1,7 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable max-len */
 export const aboutMe = [
-  'I am a front end / back end web developer.',
-  'Finding out how modern websites work and ability to build the whole thing were extremely interesting for me. Therefore I refrained from specializing on the front end or back end yet, but preferred to try out both.',
-  'Now I don\'t have an opportunity to develop on the fulltime basis, but I try to always be involved into some kind of project to keep theoretical knowledge and get useful skills.',
+  'I am a junior front end / back end web developer.',
+  'Finding out how the modern websites work and ability to build the whole thing were extremely interesting for me. Therefore I refrained from specializing on the front end or back end yet, but preferred to try out both.',
+  'At the moment, I don\'t have an opportunity to develop on the fulltime basis, but I try to always be involved into some kind of project to keep theoretical knowledge and get useful skills.',
 ];

@@ -11,7 +11,7 @@ import { aboutMe } from '../../constants/aboutMe';
 
 const Home = () => {
   return (
-    <>
+    <main>
       <div>
         <h2>About me</h2>
         <AboutMe paragraphs={aboutMe} />
@@ -35,7 +35,7 @@ const Home = () => {
           <Education record={record} key={record.course} />
         ))}
       </div>
-    </>
+    </main>
   );
 };
 

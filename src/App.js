@@ -1,24 +1,22 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useState } from 'react';
 import Home from './pages/Home/Home';
-import Node from './pages/Node/Node';
-import ReactJs from './pages/ReactJs/ReactJs';
+import SpecializationContext from './contexts/SpecializationContext';
+import specializations from './constants/specializations';
 
 const App = () => {
+  const storageName = 'specialization';
+  const defaultSpecialization = localStorage.getItem(storageName) || specializations.fullstack;
+  const [specialization, setSpecialization] = useState(defaultSpecialization);
+
+  const setAndStoreSpecialization = (spec) => {
+    localStorage.setItem(storageName, spec);
+    setSpecialization(spec);
+  };
+
   return (
-    <Router>
-      <Switch>
-        <Route path="/node">
-          <Node />
-        </Route>
-        <Route path="/react">
-          <ReactJs />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
-      </Switch>
-    </Router>
+    <SpecializationContext.Provider value={{ specialization, setSpecialization: setAndStoreSpecialization }}>
+      <Home />
+    </SpecializationContext.Provider>
   );
 };
 

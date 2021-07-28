@@ -1,15 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import SpecializationContext from '../../contexts/SpecializationContext';
 import withLayout from '../../layout/withLayout';
 import Skills from '../../components/Skills/Skills';
 import AboutMe from '../../components/AboutMe/AboutMe';
 import Experience from '../../components/Experience/Experience';
 import Education from '../../components/Education/Education';
-import { skills } from '../../constants/skills';
-import { experience } from '../../constants/experience';
-import { education } from '../../constants/education';
-import { aboutMe } from '../../constants/aboutMe';
+import skills from '../../constants/skills';
+import experience from '../../constants/experience';
+import education from '../../constants/education';
+import aboutMe from '../../constants/aboutMe';
 
 const Home = () => {
+  const { specialization } = useContext(SpecializationContext);
+  const currentSkills = Object.keys(skills)
+    .filter((key) => key === specialization)
+    .forEach((key) => delete skills[key]) || skills;
+
   return (
     <main>
       <div>
@@ -24,7 +30,7 @@ const Home = () => {
       </div>
       <div>
         <h2>Skills</h2>
-        {Object.entries(skills).map((skill) => {
+        {Object.entries(currentSkills).map((skill) => {
           const { name, data } = skill[1];
           return <Skills category={name} skills={data} key={name} />;
         })}

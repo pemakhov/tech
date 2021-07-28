@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const education = [
+const education = [
   {
     course: 'React internship',
     organization: 'ONIX',
@@ -25,3 +24,5 @@ export const education = [
     scope: 'Algorithms, Collections, Java',
   },
 ];
+
+export default education;

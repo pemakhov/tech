@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/prefer-default-export
-export const skills = {
+const skills = {
   node: {
     name: 'Node',
     data: ['Express', 'Nest.js', 'Migrations', 'Telegram Bot API', 'Joi', 'JSON Web Tokens', 'Mocha'],
@@ -53,3 +52,5 @@ export const skills = {
     data: ['English', 'Ukrainian', 'Russian'],
   },
 };
+
+export default skills;

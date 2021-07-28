@@ -1,20 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react';
+import SpecializationContext from '../contexts/SpecializationContext';
+import specializations from '../constants/specializations';
 
-const Header = () => (
-  <header>
-    <ul>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/node">Node.js</Link>
-      </li>
-      <li>
-        <Link to="/react">React</Link>
-      </li>
-    </ul>
-  </header>
-);
+const Header = () => {
+  const { setSpecialization } = useContext(SpecializationContext);
+
+  return (
+    <header>
+      <ul>
+        <li>
+          <button type="button" onClick={() => setSpecialization(specializations.fullstack)}>
+            Fullstack
+          </button>
+        </li>
+        <li>
+          <button type="button" onClick={() => setSpecialization(specializations.node)}>
+            Node.js
+          </button>
+        </li>
+        <li>
+          <button type="button" onClick={() => setSpecialization(specializations.react)}>
+            React
+          </button>
+        </li>
+      </ul>
+    </header>
+  );
+};
 
 export default Header;

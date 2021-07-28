@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const experience = [
+const experience = [
   {
     name: 'A resume website',
     period: 'July 2021 - August 2021',
@@ -25,3 +24,5 @@ export const experience = [
     result: 'Alpha version completed. The project was freezed by the product owner until other modules are ready',
   },
 ];
+
+export default experience;

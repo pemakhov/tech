@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import SpecializationContext from '../../contexts/SpecializationContext';
 import withLayout from '../../layout/withLayout';
 import Skills from '../../components/Skills/Skills';
@@ -9,12 +9,21 @@ import skills from '../../constants/skills';
 import experience from '../../constants/experience';
 import education from '../../constants/education';
 import aboutMe from '../../constants/aboutMe';
+import specializations from '../../constants/specializations';
 
 const Home = () => {
   const { specialization } = useContext(SpecializationContext);
-  const currentSkills = Object.keys(skills)
-    .filter((key) => key === specialization)
-    .forEach((key) => delete skills[key]) || skills;
+  const [currentSkills, setCurrentSkills] = useState(skills);
+  useEffect(() => {
+    const { node, react, database, ...restSkills } = skills;
+    if (specialization === specializations.node) {
+      setCurrentSkills({ node, database, react, ...restSkills });
+    } else if (specialization === specializations.react) {
+      setCurrentSkills({ react, node, database, ...restSkills });
+    } else {
+      setCurrentSkills({ node, react, database, ...restSkills });
+    }
+  }, [specialization]);
 
   return (
     <main>

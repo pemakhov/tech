@@ -10,6 +10,7 @@ import experience from '../../constants/experience';
 import education from '../../constants/education';
 import aboutMe from '../../constants/aboutMe';
 import specializations from '../../constants/specializations';
+import './Home.scss';
 
 const Home = () => {
   const { specialization } = useContext(SpecializationContext);
@@ -27,29 +28,29 @@ const Home = () => {
 
   return (
     <main>
-      <div>
+      <section className="aboutMe">
         <h2>About me</h2>
         <AboutMe paragraphs={aboutMe} />
-      </div>
-      <div>
+      </section>
+      <section className="experience">
         <h2>Experience</h2>
         {experience.map((record) => (
           <Experience record={record} key={record.name} />
         ))}
-      </div>
-      <div>
+      </section>
+      <section className="skills">
         <h2>Skills</h2>
         {Object.entries(currentSkills).map((skill) => {
           const { name, data } = skill[1];
           return <Skills category={name} skills={data} key={name} />;
         })}
-      </div>
-      <div>
+      </section>
+      <section className="education">
         <h2>Education</h2>
         {education.map((record) => (
           <Education record={record} key={record.course} />
         ))}
-      </div>
+      </section>
     </main>
   );
 };

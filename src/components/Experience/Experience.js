@@ -6,13 +6,13 @@ const Experience = (props) => {
   const { name, period, technologies, scope, result } = record;
 
   return (
-    <section className="experience">
+    <div>
       <h3>{name}</h3>
       <div className="experience__period">{period}</div>
       <div className="experience__technologies">{technologies}</div>
       <div className="experience__job">{scope}</div>
       <div className="experience__result">{result}</div>
-    </section>
+    </div>
   );
 };
 

@@ -6,12 +6,12 @@ const Education = (props) => {
   const { course, organization, period, scope } = record;
 
   return (
-    <section className="education">
+    <div>
       <h3>{course}</h3>
       <div className="experience__period">{period}</div>
       <div className="experience__organization">{organization}</div>
       <div className="experience__scope">{scope}</div>
-    </section>
+    </div>
   );
 };
 

@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 const Skills = (props) => {
   const { category, skills } = props;
   return (
-    <section>
+    <div>
       <h3>{category}</h3>
       <ul>
         {skills.map((skill) => (
           <li key={skill}>{skill}</li>
         ))}
       </ul>
-    </section>
+    </div>
   );
 };
 

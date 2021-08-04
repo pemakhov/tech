@@ -11,7 +11,14 @@ main {
 }
 
 section {
-  padding: 5rem 0.5rem;
-  max-width: 760px;
-  min-width: 100%;
+  width: 100%;
+
+  .container {
+    max-width: 760px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }

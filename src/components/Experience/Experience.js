@@ -1,29 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ExperienceBlock from './ExperienceBlock';
 
 const Experience = (props) => {
-  const { record } = props;
-  const { name, period, technologies, scope, result } = record;
+  const { experience } = props;
 
   return (
-    <div>
-      <h3>{name}</h3>
-      <div className="experience__period">{period}</div>
-      <div className="experience__technologies">{technologies}</div>
-      <div className="experience__job">{scope}</div>
-      <div className="experience__result">{result}</div>
-    </div>
+    <section className="experience">
+      <h2>Experience</h2>
+      {experience.map((record) => (
+        <ExperienceBlock record={record} key={record.name} />
+      ))}
+    </section>
   );
 };
 
 Experience.propTypes = {
-  record: PropTypes.shape({
-    name: PropTypes.string,
-    period: PropTypes.string,
-    technologies: PropTypes.string,
-    scope: PropTypes.string,
-    result: PropTypes.string,
-  }).isRequired,
+  experience: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      period: PropTypes.string,
+      technologies: PropTypes.string,
+      scope: PropTypes.string,
+      result: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default Experience;

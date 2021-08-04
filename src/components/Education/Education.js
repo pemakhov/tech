@@ -1,27 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EducationBlock from './EducationBlock';
 
 const Education = (props) => {
-  const { record } = props;
-  const { course, organization, period, scope } = record;
+  const { education } = props;
 
   return (
-    <div>
-      <h3>{course}</h3>
-      <div className="experience__period">{period}</div>
-      <div className="experience__organization">{organization}</div>
-      <div className="experience__scope">{scope}</div>
-    </div>
+    <section className="education">
+      <h2>Education</h2>
+      {education.map((record) => (
+        <EducationBlock record={record} key={record.course} />
+      ))}
+    </section>
   );
 };
 
 Education.propTypes = {
-  record: PropTypes.shape({
-    course: PropTypes.string,
-    organization: PropTypes.string,
-    period: PropTypes.string,
-    scope: PropTypes.string,
-  }).isRequired,
+  education: PropTypes.arrayOf(
+    PropTypes.shape({
+      course: PropTypes.string,
+      organization: PropTypes.string,
+      period: PropTypes.string,
+      scope: PropTypes.string,
+    })
+  ).isRequired,
 };
 
 export default Education;

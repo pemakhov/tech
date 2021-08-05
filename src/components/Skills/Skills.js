@@ -1,23 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import SkillBlock from './SkillBlock';
 
 const Skills = (props) => {
-  const { category, skills } = props;
+  const { skills } = props;
   return (
-    <div>
-      <h3>{category}</h3>
-      <ul>
-        {skills.map((skill) => (
-          <li key={skill}>{skill}</li>
-        ))}
-      </ul>
-    </div>
+    <section className="skills">
+      <div className="container">
+        <h2>Skills</h2>
+        {skills.map((skill) => {
+          const { name, data } = skill;
+          return <SkillBlock category={name} skills={data} key={name} />;
+        })}
+      </div>
+    </section>
   );
 };
 
 Skills.propTypes = {
-  category: PropTypes.string.isRequired,
-  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+  skills: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      data: PropTypes.arrayOf(PropTypes.string),
+    })
+  ).isRequired,
 };
 
 export default Skills;

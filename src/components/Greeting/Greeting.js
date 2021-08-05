@@ -11,6 +11,7 @@ const Greeting = () => (
         ))}
       </div>
     </div>
+    <div id="waves" />
   </section>
 );
 

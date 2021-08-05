@@ -7,10 +7,12 @@ const Education = (props) => {
 
   return (
     <section className="education">
-      <h2>Education</h2>
-      {education.map((record) => (
-        <EducationBlock record={record} key={record.course} />
-      ))}
+      <div className="container">
+        <h2>Education</h2>
+        {education.map((record) => (
+          <EducationBlock record={record} key={record.course} />
+        ))}
+      </div>
     </section>
   );
 };

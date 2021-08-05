@@ -6,10 +6,12 @@ const AboutMe = (props) => {
 
   return (
     <section className="aboutMe">
-      <h2>About me</h2>
-      {paragraphs.map((paragraph) => (
-        <p key={paragraph.slice(0, 20)}>{paragraph}</p>
-      ))}
+      <div className="container">
+        <h2>About me</h2>
+        {paragraphs.map((paragraph) => (
+          <p key={paragraph.slice(0, 20)}>{paragraph}</p>
+        ))}
+      </div>
     </section>
   );
 };

@@ -15,13 +15,7 @@ const Home = () => (
     <Greeting />
     <AboutMe paragraphs={aboutMe} />
     <Experience experience={experience} />
-    <section className="skills">
-      <h2>Skills</h2>
-      {Object.entries(skills).map((skill) => {
-        const { name, data } = skill[1];
-        return <Skills category={name} skills={data} key={name} />;
-      })}
-    </section>
+    <Skills skills={Object.values(skills)} />
     <Education education={education} />
   </main>
 );

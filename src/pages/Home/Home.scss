@@ -1,4 +1,75 @@
-body, main, #root {
+/*
+ * Font variables
+ */
+
+/* Accents (headers etc.) */
+$accentFontFamily: 'Yantramanav', sans-serif;
+$accentBoldFontWeight: 900;
+$accentThinFontWeight: 100;
+
+/* Common fonts */
+$commonFontFamily: 'Lato', sans-serif;
+$commonRegularFontWeight: 400;
+$commonBoldFontWeight: 900;
+
+/*
+ * Colorscheme variables
+ */
+
+$fontDark: #252323;
+$fontLight: #DFDFDF; 
+
+/* Group One */
+$bgLightGreen: #DDE5B6;
+$bgLight: #FDFFFC;
+$bgGraphite: #46494C;
+$bgLightBlue: #C0D6DF;
+
+/*
+ * General Styles
+ */
+
+/* Font size defines the size of all relative (rem) fonts */
+:root {
+  font-size: 20px;
+}
+
+.wave {
+  width: 100%;
+  height: 150px;
+  background-repeat: no-repeat;
+}
+
+* {
+  font-family: $commonFontFamily;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $accentFontFamily;
+}
+
+h1 {
+  font-size: 3.5rem !important;
+  font-weight: $accentBoldFontWeight;
+  margin: 0 !important;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 !important;
+}
+
+/*
+ * Layout
+ */
+body,
+main,
+#root {
   width: 100%;
 }
 
@@ -20,14 +91,115 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
+  padding: 5rem 0;
 
   .container {
-    min-height: 768px;
-    max-width: 768px;
+    max-width: 1024px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
   }
+}
+
+/*
+ * Sections
+ */
+
+/* greeting */
+section.greeting {
+  // background-image: url('../../images/desktop.png');
+  // background-size: cover;
+  // background-repeat: no-repeat;
+  // background-position: center;
+  background-color: $bgLightGreen;
+
+  .container {
+    min-height: 768px;
+    align-items: center;
+  }
+}
+
+h2.greeting {
+  font-weight: $accentThinFontWeight;
+}
+
+.greeting {
+  color: $fontDark;
+}
+
+/* aboutMe */
+section.aboutMe {
+  background-color: $bgLight;
+}
+
+#waveAboutMe {
+  background-image: url('../../images/waveAboutMe.svg');
+  background-color: $bgLight;
+}
+
+.aboutMe {
+  color: $fontDark;
+}
+
+/* experience */
+section.experience {
+  background-color: $bgGraphite;
+}
+
+#waveExperience {
+  background-image: url('../../images/waveExperience.svg');
+  background-color: $bgGraphite;
+}
+
+.experience {
+  color: $fontLight;
+}
+
+/* skills */
+section.skills {
+  background-color: $bgLightBlue;
+}
+
+#waveSkills {
+  background-image: url('../../images/waveSkills.svg');
+  background-color: $bgLightBlue;
+}
+
+.skills {
+  color: $fontDark;
+}
+
+/* education */
+section.education {
+  background-color: $bgLight;
+}
+
+#waveEducation {
+  background-image: url('../../images/waveEducation.svg');
+  background-color: $bgLight;
+}
+
+.aboutMe {
+  color: $fontDark;
+}
+
+/* contacts */
+section.contacts {
+  background-color: $bgGraphite;
+
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#waveContacts {
+  background-image: url('../../images/waveContacts.svg');
+  background-color: $bgGraphite;
+}
+
+.contacts {
+  color: $fontLight;
 }

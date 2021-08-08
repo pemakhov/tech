@@ -5,6 +5,7 @@ import AboutMe from '../../components/AboutMe/AboutMe';
 import Experience from '../../components/Experience/Experience';
 import Education from '../../components/Education/Education';
 import skills from '../../constants/skills';
+import Contacts from '../../components/Contacts/Contacts';
 import experience from '../../constants/experience';
 import education from '../../constants/education';
 import aboutMe from '../../constants/aboutMe';
@@ -17,6 +18,7 @@ const Home = () => (
     <Experience experience={experience} />
     <Skills skills={Object.values(skills)} />
     <Education education={education} />
+    <Contacts />
   </main>
 );
 

@@ -5,15 +5,18 @@ import SkillBlock from './SkillBlock';
 const Skills = (props) => {
   const { skills } = props;
   return (
-    <section className="skills">
-      <div className="container">
-        <h2>Skills</h2>
-        {skills.map((skill) => {
-          const { name, data } = skill;
-          return <SkillBlock category={name} skills={data} key={name} />;
-        })}
-      </div>
-    </section>
+    <>
+      <div id="waveSkills" className="wave" />
+      <section className="skills">
+        <div className="container">
+          <h2>Skills</h2>
+          {skills.map((skill) => {
+            const { name, data } = skill;
+            return <SkillBlock category={name} skills={data} key={name} />;
+          })}
+        </div>
+      </section>
+    </>
   );
 };
 

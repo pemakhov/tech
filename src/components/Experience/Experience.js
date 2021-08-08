@@ -6,14 +6,17 @@ const Experience = (props) => {
   const { experience } = props;
 
   return (
-    <section className="experience">
-      <div className="container">
-        <h2>Experience</h2>
-        {experience.map((record) => (
-          <ExperienceBlock record={record} key={record.name} />
-        ))}
-      </div>
-    </section>
+    <>
+      <div id="waveExperience" className="wave" />
+      <section className="experience">
+        <div className="container">
+          <h2>Experience</h2>
+          {experience.map((record) => (
+            <ExperienceBlock record={record} key={record.name} />
+          ))}
+        </div>
+      </section>
+    </>
   );
 };
 

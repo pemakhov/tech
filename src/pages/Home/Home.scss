@@ -53,6 +53,12 @@ h6 {
   font-family: $accentFontFamily;
 }
 
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
 h1 {
   font-size: 3.5rem !important;
   font-weight: $accentBoldFontWeight;
@@ -62,6 +68,15 @@ h1 {
 h2 {
   font-size: 2rem;
   margin: 0 !important;
+}
+
+h3 {
+  font-size: 2.5rem;
+  width: 100%;
+}
+
+h4 {
+  font-size: 1.5rem;
 }
 
 /*
@@ -116,8 +131,8 @@ section.greeting {
   background-color: $bgLightGreen;
 
   .container {
-    min-height: 768px;
     align-items: center;
+    padding: 10rem 0;
   }
 }
 
@@ -169,6 +184,17 @@ section.skills {
 
 .skills {
   color: $fontDark;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  div {
+    border: 1px solid black;
+    padding: 1rem;
+  }
 }
 
 /* education */

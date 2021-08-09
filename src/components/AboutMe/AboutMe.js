@@ -10,7 +10,7 @@ const AboutMe = (props) => {
       <div id="waveAboutMe" className="wave" />
       <section className="aboutMe">
         <div className="container aboutMe">
-          <h2 className="aboutMe">About me</h2>
+          <h3 className="aboutMe">About me</h3>
           {paragraphs.map((paragraph) => (
             <p key={paragraph.slice(0, 20)}>{paragraph}</p>
           ))}

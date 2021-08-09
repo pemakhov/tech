@@ -10,7 +10,7 @@ const Education = (props) => {
       <div id="waveEducation" className="wave" />
       <section className="education">
         <div className="container">
-          <h2>Education</h2>
+          <h3>Education</h3>
           {education.map((record) => (
             <EducationBlock record={record} key={record.course} />
           ))}

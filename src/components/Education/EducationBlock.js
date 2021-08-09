@@ -7,7 +7,7 @@ const EducationBlock = (props) => {
 
   return (
     <div>
-      <h3>{course}</h3>
+      <h4>{course}</h4>
       <div className="experience__period">{period}</div>
       <div className="experience__organization">{organization}</div>
       <div className="experience__scope">{scope}</div>

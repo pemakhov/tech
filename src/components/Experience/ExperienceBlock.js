@@ -7,7 +7,7 @@ const ExperienceBlock = (props) => {
 
   return (
     <div>
-      <h3>{name}</h3>
+      <h4>{name}</h4>
       <div className="experience__period">{period}</div>
       <div className="experience__technologies">{technologies}</div>
       <div className="experience__job">{scope}</div>

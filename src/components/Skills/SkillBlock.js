@@ -5,7 +5,7 @@ const SkillBlock = (props) => {
   const { category, skills } = props;
   return (
     <div>
-      <h3>{category}</h3>
+      <h4>{category}</h4>
       <ul>
         {skills.map((skill) => (
           <li key={skill}>{skill}</li>

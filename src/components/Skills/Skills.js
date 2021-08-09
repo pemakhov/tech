@@ -9,11 +9,13 @@ const Skills = (props) => {
       <div id="waveSkills" className="wave" />
       <section className="skills">
         <div className="container">
-          <h2>Skills</h2>
-          {skills.map((skill) => {
-            const { name, data } = skill;
-            return <SkillBlock category={name} skills={data} key={name} />;
-          })}
+          <h3>Skills<i className="fab fa-node" /></h3>
+          <div className="skillsGrid">
+            {skills.map((skill) => {
+              const { name, data } = skill;
+              return <SkillBlock category={name} skills={data} key={name} />;
+            })}
+          </div>
         </div>
       </section>
     </>

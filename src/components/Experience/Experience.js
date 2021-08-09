@@ -10,7 +10,7 @@ const Experience = (props) => {
       <div id="waveExperience" className="wave" />
       <section className="experience">
         <div className="container">
-          <h2>Experience</h2>
+          <h3>Experience</h3>
           {experience.map((record) => (
             <ExperienceBlock record={record} key={record.name} />
           ))}

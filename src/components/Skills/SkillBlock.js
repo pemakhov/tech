@@ -2,9 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const SkillBlock = (props) => {
-  const { category, skills } = props;
+  const { category, awesomeIconClassName, skills } = props;
+  const icon = `${awesomeIconClassName} fa-3x`;
   return (
-    <div>
+    <div className="skillBlock">
+      <div className="skillIcon">
+        <i className={icon} />
+      </div>
       <h4>{category}</h4>
       <ul>
         {skills.map((skill) => (
@@ -17,6 +21,7 @@ const SkillBlock = (props) => {
 
 SkillBlock.propTypes = {
   category: PropTypes.string.isRequired,
+  awesomeIconClassName: PropTypes.string.isRequired,
   skills: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 

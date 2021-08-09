@@ -9,11 +9,13 @@ const Skills = (props) => {
       <div id="waveSkills" className="wave" />
       <section className="skills">
         <div className="container">
-          <h3>Skills<i className="fab fa-node" /></h3>
+          <h3>Skills</h3>
           <div className="skillsGrid">
             {skills.map((skill) => {
-              const { name, data } = skill;
-              return <SkillBlock category={name} skills={data} key={name} />;
+              const { name, awesomeIconClassName, data } = skill;
+              return (
+                <SkillBlock category={name} awesomeIconClassName={awesomeIconClassName} skills={data} key={name} />
+              );
             })}
           </div>
         </div>
@@ -26,6 +28,7 @@ Skills.propTypes = {
   skills: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
+      awesomeIconClassName: PropTypes.string,
       data: PropTypes.arrayOf(PropTypes.string),
     })
   ).isRequired,

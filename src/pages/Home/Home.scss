@@ -16,14 +16,14 @@ $commonBoldFontWeight: 900;
  * Colorscheme variables
  */
 
-$fontDark: #252323;
-$fontLight: #DFDFDF; 
+$darkGray: #252323;
+$fontLight: #dfdfdf;
 
 /* Group One */
-$bgLightGreen: #DDE5B6;
-$bgLight: #FDFFFC;
-$bgGraphite: #46494C;
-$bgLightBlue: #C0D6DF;
+$bgLightGreen: #dde5b6;
+$bgLight: #fdfffc;
+$bgGraphite: #46494c;
+$bgLightBlue: #c0d6df;
 
 /*
  * General Styles
@@ -141,7 +141,7 @@ h2.greeting {
 }
 
 .greeting {
-  color: $fontDark;
+  color: $darkGray;
 }
 
 /* aboutMe */
@@ -155,7 +155,7 @@ section.aboutMe {
 }
 
 .aboutMe {
-  color: $fontDark;
+  color: $darkGray;
 }
 
 /* experience */
@@ -183,17 +183,46 @@ section.skills {
 }
 
 .skills {
-  color: $fontDark;
+  color: $darkGray;
 }
 
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 20px;
 
-  div {
-    border: 1px solid black;
+  div.skillBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
     padding: 1rem;
+    background-color: $darkGray;
+    color: $bgLightBlue;
+    box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 10px;
+
+    .skillIcon {
+      margin: 1rem 0;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      list-style: none;
+      margin-block: 0;
+      padding-inline: 0;
+
+      li {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+    }
   }
 }
 
@@ -208,7 +237,7 @@ section.education {
 }
 
 .aboutMe {
-  color: $fontDark;
+  color: $darkGray;
 }
 
 /* contacts */

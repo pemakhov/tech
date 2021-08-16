@@ -32,7 +32,7 @@ $marine: #2EC4B6;
 
 /* Font size defines the size of all relative (rem) fonts */
 :root {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .wave {
@@ -201,7 +201,11 @@ section.skills {
 
     .skillIcon {
       margin: 1rem 0;
+<<<<<<< HEAD
       transition: all 0.3s ease-out;
+=======
+      color: $bgLightGreen;
+>>>>>>> 65932b14b3a84fce7e581aa585cfd008f563d889
     }
 
     h4 {
@@ -219,7 +223,24 @@ section.skills {
 
       li {
         text-align: center;
-        padding: 0.5rem 0;
+        padding: 0.4rem 0;
+        // border-top: 1px solid;
+        position: relative;
+      }
+
+      li::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: calc(50% - 2px);
+        border-radius: 50%;
+        height: 3px;
+        width: 3px;
+        background-color: $bgLightBlue;
+      }
+
+      li:nth-child(1)::after {
+        display: none;
       }
     }
   }
@@ -257,6 +278,10 @@ section.contacts {
   .container {
     flex-direction: row;
     justify-content: space-between;
+
+    p .contactsIcon {
+      margin-right: 0.5rem;
+    }
   }
 }
 

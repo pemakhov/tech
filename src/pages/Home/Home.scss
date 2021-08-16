@@ -17,13 +17,14 @@ $commonBoldFontWeight: 900;
  */
 
 $darkGray: #252323;
-$fontLight: #dfdfdf;
-
-/* Group One */
-$bgLightGreen: #dde5b6;
+$light: #dfdfdf;
+$lightGreen: #dde5b6;
 $bgLight: #fdfffc;
 $bgGraphite: #46494c;
 $bgLightBlue: #c0d6df;
+$rose: #e71d36;
+$darkBlue: #011627;
+$marine: #2EC4B6;
 
 /*
  * General Styles
@@ -128,7 +129,7 @@ section.greeting {
   // background-size: cover;
   // background-repeat: no-repeat;
   // background-position: center;
-  background-color: $bgLightGreen;
+  background-color: $lightGreen;
 
   .container {
     align-items: center;
@@ -169,7 +170,7 @@ section.experience {
 }
 
 .experience {
-  color: $fontLight;
+  color: $light;
 }
 
 /* skills */
@@ -180,10 +181,6 @@ section.skills {
 #waveSkills {
   background-image: url('../../images/waveSkills.svg');
   background-color: $bgLightBlue;
-}
-
-.skills {
-  color: $darkGray;
 }
 
 .skillsGrid {
@@ -200,9 +197,11 @@ section.skills {
     background-color: $darkGray;
     color: $bgLightBlue;
     box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 10px;
+    transition: all 0.6s ease-out;
 
     .skillIcon {
       margin: 1rem 0;
+      transition: all 0.3s ease-out;
     }
 
     h4 {
@@ -222,6 +221,17 @@ section.skills {
         text-align: center;
         padding: 0.5rem 0;
       }
+    }
+  }
+
+  div.skillBlock:hover {
+    background-color: $darkBlue;
+    color: $marine;
+    transform: scale(1.005);
+
+    .skillIcon {
+      color: $rose;
+      transform: scale(1.5);
     }
   }
 }
@@ -256,5 +266,5 @@ section.contacts {
 }
 
 .contacts {
-  color: $fontLight;
+  color: $light;
 }

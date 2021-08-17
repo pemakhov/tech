@@ -22,9 +22,14 @@ $lightGreen: #dde5b6;
 $bgLight: #fdfffc;
 $bgGraphite: #46494c;
 $bgLightBlue: #c0d6df;
-$rose: #e71d36;
-$darkBlue: #011627;
-$marine: #2EC4B6;
+
+/*
+ * Break points
+ */
+$smallDeviceWidth: 576px;
+$mediumDeviceWidth: 768px;
+$largeDeviceWidth: 992px;
+$extraLargeDeviceWidth: 1200px;
 
 /*
  * General Styles
@@ -201,11 +206,7 @@ section.skills {
 
     .skillIcon {
       margin: 1rem 0;
-<<<<<<< HEAD
       transition: all 0.3s ease-out;
-=======
-      color: $bgLightGreen;
->>>>>>> 65932b14b3a84fce7e581aa585cfd008f563d889
     }
 
     h4 {
@@ -246,12 +247,10 @@ section.skills {
   }
 
   div.skillBlock:hover {
-    background-color: $darkBlue;
-    color: $marine;
-    transform: scale(1.005);
+    background-color: black;
+    color: white;
 
     .skillIcon {
-      color: $rose;
       transform: scale(1.5);
     }
   }

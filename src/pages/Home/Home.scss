@@ -24,7 +24,7 @@ $lightGray-400: #dfdfdf;
 
 $lightGreen: #dde5b6;
 $lightBlue-300: #c0d6df;
-$lightBlue-600: #85B0C1;
+$lightBlue-600: #85b0c1;
 
 /*
  * Break points
@@ -37,12 +37,14 @@ $minNormalWidth: 600px;
 
 /* Prevent paddings cause horizontal scroll-bar */
 
-* , *:before, *:after{ 
-   box-sizing:border-box; 
-   -moz-box-sizing:border-box; 
-   -webkit-box-sizing:border-box; 
-   -ms-box-sizing:border-box;
- }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
 
 /* Font size defines the size of all relative (rem) fonts */
 :root {
@@ -242,7 +244,7 @@ section.skills {
       }
 
       li::after {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: calc(50% - 2px);
@@ -297,8 +299,24 @@ section.contacts {
       justify-content: space-between;
     }
 
-    p .contactsIcon {
-      margin-right: 0.5rem;
+    div {
+      .contactsIcon {
+        margin-right: 0.5rem;
+        color: $lightGray-200;
+      }
+
+      .contactsButton {
+        display: inline-block;
+        background-color: inherit;
+        color: $lightGray-200;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+      }
+
+      .contactsButton:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

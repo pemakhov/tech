@@ -1,13 +1,13 @@
 const skills = {
+  general: {
+    name: 'General',
+    awesomeIconClassName: 'fas fa-briefcase',
+    data: ['Git', 'RegExp', 'Linting', 'Linux', 'Vim', 'Graphic Tools', 'Docker', 'Apache2'],
+  },
   node: {
     name: 'Node',
     awesomeIconClassName: 'fab fa-node',
-    data: ['Express', 'Nest.js', 'Migrations', 'Telegram Bot API', 'Joi', 'JSON Web Tokens'],
-  },
-  database: {
-    name: 'Database',
-    awesomeIconClassName: 'fas fa-database',
-    data: ['MongoDB', 'Redis', 'MySQL'],
+    data: ['Express', 'Nest.js', 'Migrations', 'Telegram Bot API', 'REST API', 'Joi', 'JSON Web Tokens'],
   },
   react: {
     name: 'React',
@@ -21,36 +21,22 @@ const skills = {
       'Formik',
       'i18next',
       'PropTypes',
-      'JSX',
-      'Yup',
     ],
   },
-  testing: {
-    name: 'Testing',
-    awesomeIconClassName: 'fas fa-hammer',
-    data: ['Mocha', 'Jest'],
-  },
-  general: {
-    name: 'General',
-    awesomeIconClassName: 'fas fa-briefcase',
-    data: [
-      'npm',
-      'Git',
-      'RegExp',
-      'Webpack',
-      'Linting',
-      'Linux',
-      'Vim',
-      'Graphic Tools',
-      'REST API',
-      'Docker',
-      'Apache2',
-    ],
+  database: {
+    name: 'Database',
+    awesomeIconClassName: 'fas fa-database',
+    data: ['MongoDB', 'Redis', 'MySQL'],
   },
   webLayout: {
     name: 'Web Layout',
     awesomeIconClassName: 'fas fa-code',
     data: ['HTML', 'CSS', 'SCSS', 'SASS', 'Bootstrap', 'PUG'],
+  },
+  testing: {
+    name: 'Testing',
+    awesomeIconClassName: 'fas fa-hammer',
+    data: ['Mocha', 'Jest'],
   },
   programmingLanguages: {
     name: 'Programming languages',

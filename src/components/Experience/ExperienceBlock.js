@@ -6,12 +6,12 @@ const ExperienceBlock = (props) => {
   const { name, period, technologies, scope, result } = record;
 
   return (
-    <div>
+    <div className="experienceBlock">
       <h4>{name}</h4>
-      <div className="experience__period">{period}</div>
-      <div className="experience__technologies">{technologies}</div>
-      <div className="experience__job">{scope}</div>
-      <div className="experience__result">{result}</div>
+      <div className="experiencePeriod">{period}</div>
+      <div className="experienceTechnologies">{technologies}</div>
+      <div className="experienceJob">{scope}</div>
+      <div className="experienceResult">{result}</div>
     </div>
   );
 };

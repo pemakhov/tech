@@ -1,9 +1,4 @@
 const skills = {
-  general: {
-    name: 'General',
-    awesomeIconClassName: 'fas fa-briefcase',
-    data: ['Git', 'RegExp', 'Linting', 'Linux', 'Vim', 'Graphic Tools', 'Docker', 'Apache2'],
-  },
   node: {
     name: 'Node',
     awesomeIconClassName: 'fab fa-node',
@@ -22,6 +17,11 @@ const skills = {
       'i18next',
       'PropTypes',
     ],
+  },
+  general: {
+    name: 'General',
+    awesomeIconClassName: 'fas fa-briefcase',
+    data: ['Git', 'RegExp', 'Linting', 'Linux', 'Vim', 'Graphic Tools', 'Docker', 'Apache2'],
   },
   database: {
     name: 'Database',

@@ -49,12 +49,14 @@ $minNormalWidth: 600px;
 /* Font size defines the size of all relative (rem) fonts */
 :root {
   font-size: 18px;
+  min-width: 320px;
 }
 
 .wave {
   display: none;
-  width: 100%;
+  position: relative;
   height: 150px;
+  background-size: cover;
   background-repeat: no-repeat;
 
   @media (min-width: $minNormalWidth) {
@@ -218,7 +220,6 @@ section.aboutMe {
 
 #waveAboutMe {
   background-image: url('../../images/waveAboutMe.svg');
-  background-color: $lightGray-200;
 }
 
 .aboutMe {
@@ -363,12 +364,16 @@ section.contacts {
 
   .container {
     flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
     @media (min-width: $minNormalWidth) {
       flex-direction: row;
-      justify-content: space-between;
     }
 
     div {
+      margin: 0.5rem 0;
+
       .contactsIcon {
         margin-right: 0.5rem;
         color: $lightGray-200;

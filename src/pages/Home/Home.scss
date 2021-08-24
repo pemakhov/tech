@@ -50,8 +50,12 @@ $minNormalWidth: 600px;
 
 /* Font size defines the size of all relative (rem) fonts */
 :root {
-  font-size: 24px;
+  font-size: 20px;
   min-width: 320px;
+
+  @media (min-width: $minNormalWidth) {
+    font-size: 24px;
+  }
 }
 
 * {
@@ -74,19 +78,30 @@ h3 {
 }
 
 h1 {
-  font-size: 3.5rem !important;
+  font-size: 2.5rem !important;
   font-weight: $accentBoldFontWeight;
   margin: 0 !important;
+
+  @media (min-width: $minNormalWidth) {
+    font-size: 3.5rem;
+  }
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 2rem;
   margin: 0 !important;
+
+  @media (min-width: $minNormalWidth) {
+    font-size: 3rem;
+  }
 }
 
 h3 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   width: 100%;
+  @media (min-width: $minNormalWidth) {
+    font-size: 2.5rem;
+  }
 }
 
 h4 {

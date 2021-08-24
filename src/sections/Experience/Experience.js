@@ -6,17 +6,14 @@ const Experience = (props) => {
   const { experience } = props;
 
   return (
-    <>
-      <div id="waveExperience" className="wave" />
-      <section className="experience">
-        <div className="container">
-          <h3>Experience</h3>
-          {experience.map((record) => (
-            <ExperienceBlock record={record} key={record.name} />
-          ))}
-        </div>
-      </section>
-    </>
+    <section className="experience">
+      <div className="container">
+        <h3>Experience</h3>
+        {experience.map((record) => (
+          <ExperienceBlock record={record} key={record.name} />
+        ))}
+      </div>
+    </section>
   );
 };
 
@@ -26,7 +23,7 @@ Experience.propTypes = {
       name: PropTypes.string,
       period: PropTypes.string,
       technologies: PropTypes.string,
-      scope: PropTypes.string,
+      task: PropTypes.string,
       result: PropTypes.string,
     })
   ).isRequired,

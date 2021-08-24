@@ -16,15 +16,17 @@ $commonBoldFontWeight: 900;
  * Colorscheme variables
  */
 
-$darkGray-400: #46494c;
-$darkGray-800: #252323;
+$black: #101010;
+$white: white;
 
-$lightGray-200: #fdfffc;
-$lightGray-400: #dfdfdf;
+$blue-100: #D0F5FF;
+$blue-200: #B2D5F3;
+$blue-500: #32556E;
+$blue-600: #023047;
+$blue-800: #00172C;
+$blue-900: #001328;
 
-$lightGreen: #dde5b6;
-$lightBlue-300: #c0d6df;
-$lightBlue-600: #85b0c1;
+$beige: #FFF7D6;
 
 /*
  * Break points
@@ -48,20 +50,8 @@ $minNormalWidth: 600px;
 
 /* Font size defines the size of all relative (rem) fonts */
 :root {
-  font-size: 18px;
+  font-size: 24px;
   min-width: 320px;
-}
-
-.wave {
-  display: none;
-  position: relative;
-  height: 150px;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  @media (min-width: $minNormalWidth) {
-    display: block;
-  }
 }
 
 * {
@@ -90,7 +80,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0 !important;
 }
 
@@ -115,13 +105,14 @@ h4 {
   content: attr(tooltip-text);
   font-size: 0.7rem;
   text-align: center;
+  white-space: nowrap;
   position: absolute;
   bottom: 100%;
   left: 50%;
   transform: translate(-50%);
-  background-color: $lightBlue-300;
+  background-color: $beige;
   border-radius: 10px;
-  color: $darkGray-800;
+  color: $blue-800;
   visibility: hidden;
   // Animation:
   opacity: 0;
@@ -135,12 +126,12 @@ h4 {
 
 .hasTooltip::after {
   position: absolute;
-  content: "";
+  content: '';
   bottom: 100%;
   right: 50%;
   transform: translate(50%);
   border: 5px solid black;
-  border-color: $lightBlue-300 transparent transparent transparent;
+  border-color: $blue-100 transparent transparent transparent;
   visibility: hidden;
   // Animation:
   opacity: 0;
@@ -175,6 +166,7 @@ main {
 
 section {
   width: 100%;
+  min-height: 100vh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -197,7 +189,22 @@ section {
 
 /* greeting */
 section.greeting {
-  background-color: $lightGreen;
+  color: $beige;
+  background-image: linear-gradient(
+    to right top,
+    #023047,
+    #153251,
+    #2a3358,
+    #3f325b,
+    #542f5a,
+    #5a305d,
+    #5f315f,
+    #653262,
+    #5a386e,
+    #4b3e78,
+    #364580,
+    #0a4b86
+  );
 
   .container {
     align-items: center;
@@ -209,43 +216,35 @@ h2.greeting {
   font-weight: $accentThinFontWeight;
 }
 
-.greeting {
-  color: $darkGray-800;
-}
-
 /* aboutMe */
 section.aboutMe {
-  background-color: $lightGray-200;
-}
-
-#waveAboutMe {
-  background-image: url('../../images/waveAboutMe.svg');
+  background-color: $beige;
 }
 
 .aboutMe {
-  color: $darkGray-800;
+  color: $black;
 }
 
 /* experience */
 section.experience {
-  background-color: $darkGray-400;
-}
-
-#waveExperience {
-  background-image: url('../../images/waveExperience.svg');
-  background-color: $darkGray-400;
+  background-color: $black;
 }
 
 .experience {
-  color: $lightGray-400;
+  color: $beige;
 }
 
 .experienceBlock div {
   margin: 1rem 0;
+
+  span {
+  font-style: normal;
+  font-weight: $commonBoldFontWeight;
+  }
 }
 
 .experiencePeriod {
-  font-weight: $commonBoldFontWeight;
+  font-style: italic;
 }
 
 .experienceTechnologies {
@@ -254,12 +253,8 @@ section.experience {
 
 /* skills */
 section.skills {
-  background-color: $lightBlue-300;
-}
-
-#waveSkills {
-  background-image: url('../../images/waveSkills.svg');
-  background-color: $lightBlue-300;
+  background-color: $blue-900;
+  color: $blue-100;
 }
 
 .skillsGrid {
@@ -269,15 +264,31 @@ section.skills {
   gap: 20px;
 
   div.skillBlock {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
     padding: 1rem;
-    background-color: $darkGray-400;
-    color: $lightBlue-300;
+    background-image: linear-gradient(
+      to right top,
+      #023047,
+      #153251,
+      #2a3358,
+      #3f325b,
+      #542f5a,
+      #5a305d,
+      #5f315f,
+      #653262,
+      #5a386e,
+      #4b3e78,
+      #364580,
+      #0a4b86
+    );
+    color: $blue-200;
     box-shadow: rgba(0, 0, 0, 0.6) 3px 3px 10px;
     transition: all 0.6s ease-out;
+    z-index: 1;
 
     .skillIcon {
       margin: 1rem 0;
@@ -301,7 +312,6 @@ section.skills {
       li {
         text-align: center;
         padding: 0.4rem 0;
-        // border-top: 1px solid;
         position: relative;
       }
 
@@ -313,7 +323,7 @@ section.skills {
         border-radius: 50%;
         height: 3px;
         width: 3px;
-        background-color: $lightBlue-300;
+        background-color: $blue-200;
       }
 
       li:nth-child(1)::after {
@@ -322,9 +332,41 @@ section.skills {
     }
   }
 
+  div.skillBlock::after {
+    content: '';
+    position: absolute;
+    background-image: linear-gradient(
+      to right top,
+      #00c6b2,
+      #00a8a9,
+      #008b9b,
+      #006e86,
+      #00526c,
+      #00506e,
+      #004e70,
+      #004b71,
+      #006092,
+      #0075b5,
+      #008ada,
+      #00a0ff
+    );
+    border-radius: 5px;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    will-change: opacity;
+    transition: opacity 0.5s ease-out;
+  }
+
+  div.skillBlock:hover::after {
+    opacity: 0;
+  }
+
   div.skillBlock:hover {
-    background-color: $darkGray-800;
-    color: $lightBlue-600;
+    color: $beige;
 
     .skillIcon {
       transform: scale(1.5);
@@ -338,29 +380,30 @@ section.skills {
 
 /* education */
 section.education {
-  background-color: $lightGray-200;
+  background-color: $beige;
 }
 
 .educationBlock div {
   margin: 1rem 0;
+
+  span {
+    font-style: normal;
+  }
 }
 
 .educationPeriod {
   font-style: italic;
 }
 
-#waveEducation {
-  background-image: url('../../images/waveEducation.svg');
-  background-color: $lightGray-200;
-}
-
 .aboutMe {
-  color: $darkGray-800;
+  color: $blue-800;
 }
 
 /* contacts */
 section.contacts {
-  background-color: $darkGray-400;
+  padding: 3rem 0.5rem;
+  min-height: 0;
+  background-color: $blue-900;
 
   .container {
     flex-direction: column;
@@ -376,14 +419,15 @@ section.contacts {
 
       .contactsIcon {
         margin-right: 0.5rem;
-        color: $lightGray-200;
+        color: $beige;
       }
 
       .contactsButton {
         display: inline-block;
         background-color: inherit;
-        color: $lightGray-200;
+        color: $beige;
         border: none;
+        font-size: 0.9rem;
         text-decoration: underline;
         cursor: pointer;
         padding: 0;
@@ -394,17 +438,23 @@ section.contacts {
       }
 
       .contactsButton:active {
-        color: $lightGray-400;
+        color: $blue-500;
       }
     }
   }
 }
 
-#waveContacts {
-  background-image: url('../../images/waveContacts.svg');
-  background-color: $darkGray-400;
+.contacts {
+  color: $beige;
 }
 
-.contacts {
-  color: $lightGray-400;
+/* Footer */
+section.footer {
+  font-size: 0.8rem;
+  background-color: $blue-600;
+  color: $beige;
+  min-height: 0;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
 }

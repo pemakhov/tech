@@ -31,7 +31,7 @@ const skills = {
   webLayout: {
     name: 'Web Layout',
     awesomeIconClassName: 'fas fa-code',
-    data: ['HTML', 'CSS', 'SCSS', 'SASS', 'Bootstrap', 'PUG'],
+    data: ['HTML', 'CSS', 'SCSS', 'SASS', 'Bootstrap', 'Materialize', 'PUG'],
   },
   testing: {
     name: 'Testing',

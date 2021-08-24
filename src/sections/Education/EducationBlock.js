@@ -8,9 +8,9 @@ const EducationBlock = (props) => {
   return (
     <div className="educationBlock">
       <h4>{course}</h4>
-      <div className="educationPeriod">{period}</div>
-      <div className="educationOrganization">Organization: {organization}</div>
-      <div className="educationScope">Scope: {scope}</div>
+      <div className="educationPeriod"><span>Period of time: </span>{period}</div>
+      <div className="educationOrganization"><span>Organization: </span>{organization}</div>
+      <div className="educationScope"><span>Scope: {scope}</span></div>
     </div>
   );
 };

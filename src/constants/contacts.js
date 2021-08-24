@@ -19,7 +19,7 @@ const contacts = [
   },
   {
     name: 'skype',
-    resource: '@pemakhov', 
+    resource: 'pemakhov', 
     awesomeIconClassName: 'fab fa-skype', 
     prompt: 'Click to copy name'
   },

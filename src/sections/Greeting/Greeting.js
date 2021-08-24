@@ -1,6 +1,5 @@
 import React from 'react';
 import greeting from '../../constants/greeting';
-import './Greeting.scss';
 
 const Greeting = () => (
   <section className="greeting">

@@ -6,17 +6,14 @@ const Education = (props) => {
   const { education } = props;
 
   return (
-    <>
-      <div id="waveEducation" className="wave" />
-      <section className="education">
-        <div className="container">
-          <h3>Education</h3>
-          {education.map((record) => (
-            <EducationBlock record={record} key={record.course} />
-          ))}
-        </div>
-      </section>
-    </>
+    <section className="education">
+      <div className="container">
+        <h3>Education</h3>
+        {education.map((record) => (
+          <EducationBlock record={record} key={record.course} />
+        ))}
+      </div>
+    </section>
   );
 };
 

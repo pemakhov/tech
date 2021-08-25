@@ -16,8 +16,8 @@ $commonBoldFontWeight: 900;
  * Colorscheme variables
  */
 
-$black: #101010;
-$white: white;
+$black: #303030;
+$white: #FAFAFA;
 
 $blue-100: #D0F5FF;
 $blue-200: #B2D5F3;
@@ -25,8 +25,6 @@ $blue-500: #32556E;
 $blue-600: #023047;
 $blue-800: #00172C;
 $blue-900: #001328;
-
-$beige: #FFF7D6;
 
 /*
  * Break points
@@ -50,10 +48,10 @@ $minNormalWidth: 600px;
 
 /* Font size defines the size of all relative (rem) fonts */
 :root {
-  font-size: 20px;
+  font-size: 14px;
 
   @media (min-width: $minNormalWidth) {
-    font-size: 24px;
+    font-size: 18px;
   }
 }
 
@@ -82,7 +80,7 @@ h1 {
   font-weight: $accentBoldFontWeight;
 
   @media (min-width: $minNormalWidth) {
-    font-size: 3.5rem;
+    font-size: 3.5rem !important;
   }
 }
 
@@ -90,7 +88,7 @@ h2 {
   font-size: 2rem;
 
   @media (min-width: $minNormalWidth) {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 }
 
@@ -105,6 +103,11 @@ h3 {
 
 h4 {
   font-size: 1.5rem;
+  margin: 1rem 0 0.5rem !important;
+}
+
+p {
+  margin: 0.5rem 0;
 }
 
 /* Toolitps */
@@ -124,7 +127,7 @@ h4 {
   bottom: 100%;
   left: 50%;
   transform: translate(-50%);
-  background-color: $beige;
+  background-color: $white;
   border-radius: 10px;
   color: $blue-800;
   visibility: hidden;
@@ -145,7 +148,7 @@ h4 {
   right: 50%;
   transform: translate(50%);
   border: 5px solid black;
-  border-color: $blue-100 transparent transparent transparent;
+  border-color: $white transparent transparent transparent;
   visibility: hidden;
   // Animation:
   opacity: 0;
@@ -185,7 +188,11 @@ section {
   justify-content: center;
   align-items: center;
   display: flex;
-  padding: 5rem 0.5rem;
+  padding: 2rem 0.5rem;
+
+  @media (min-width: $minNormalWidth) {
+    padding: 5rem 0.5rem;
+  }
 
   .container {
     max-width: 1200px;
@@ -203,7 +210,7 @@ section {
 
 /* greeting */
 section.greeting {
-  color: $beige;
+  color: $white;
   background-image: linear-gradient(
     to right top,
     #023047,
@@ -232,7 +239,7 @@ h2.greeting {
 
 /* aboutMe */
 section.aboutMe {
-  background-color: $beige;
+  background-color: $white;
 }
 
 .aboutMe {
@@ -245,16 +252,11 @@ section.experience {
 }
 
 .experience {
-  color: $beige;
+  color: $white;
 }
 
-.experienceBlock div {
-  margin: 1rem 0;
-
-  span {
+.experienceBlock p span {
   font-style: normal;
-  font-weight: $commonBoldFontWeight;
-  }
 }
 
 .experiencePeriod {
@@ -380,7 +382,7 @@ section.skills {
   }
 
   div.skillBlock:hover {
-    color: $beige;
+    color: $white;
 
     .skillIcon {
       transform: scale(1.5);
@@ -394,7 +396,7 @@ section.skills {
 
 /* education */
 section.education {
-  background-color: $beige;
+  background-color: $white;
 }
 
 .educationBlock div {
@@ -433,13 +435,13 @@ section.contacts {
 
       .contactsIcon {
         margin-right: 0.5rem;
-        color: $beige;
+        color: $white;
       }
 
-      .contactsButton {
+      .contactsButton, .contactsLink {
         display: inline-block;
         background-color: inherit;
-        color: $beige;
+        color: $white;
         border: none;
         font-size: 0.9rem;
         text-decoration: underline;
@@ -447,11 +449,11 @@ section.contacts {
         padding: 0;
       }
 
-      .contactsButton:hover {
+      .contactsButton:hover, .contactsLink:hover {
         text-decoration: none;
       }
 
-      .contactsButton:active {
+      .contactsButton:active, .contactsLink:active {
         color: $blue-500;
       }
     }
@@ -459,14 +461,14 @@ section.contacts {
 }
 
 .contacts {
-  color: $beige;
+  color: $white;
 }
 
 /* Footer */
 section.footer {
   font-size: 0.8rem;
   background-color: $blue-600;
-  color: $beige;
+  color: $white;
   min-height: 0;
   display: flex;
   justify-content: center;

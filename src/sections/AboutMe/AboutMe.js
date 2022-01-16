@@ -16,6 +16,7 @@ const AboutMe = () => {
       <div className="container aboutMe">
         <h3 className="aboutMe">About me</h3>
         <Markdown>{article}</Markdown>
+        <div id="calipers" />
       </div>
     </section>
   );

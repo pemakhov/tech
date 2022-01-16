@@ -30,8 +30,8 @@ EducationBlock.propTypes = {
     organization: PropTypes.string,
     period: PropTypes.string,
     scope: PropTypes.string,
-    certificates: PropTypes.oneOf([
-      null,
+    certificates: PropTypes.oneOfType([
+      PropTypes.oneOf([null]),
       PropTypes.shape({
         title: PropTypes.string,
         link: PropTypes.string,

@@ -238,6 +238,14 @@ h2.greeting {
 }
 
 /* aboutMe */
+#calipers {
+  height: 300px;
+  width: 100%;
+  background: no-repeat url("/img/calipers.png");
+  background-size: contain;
+  background-position: center;
+}
+
 section.aboutMe {
   background-color: $white;
 }

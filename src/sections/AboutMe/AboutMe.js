@@ -1,21 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { useState, useEffect } from 'react';
+import Markdown from 'markdown-to-jsx';
+import articlePath from '../../constants/aboutMe.md';
 
-const AboutMe = (props) => {
-  const { paragraphs } = props;
+const AboutMe = () => {
+  const [article, setArticle] = useState('');
+
+  useEffect(() => {
+    fetch(articlePath)
+      .then((res) => res.text())
+      .then((text) => setArticle(text))
+  }, []);
 
   return (
     <section className="aboutMe">
       <div className="container aboutMe">
         <h3 className="aboutMe">About me</h3>
-        {paragraphs.map((paragraph) => (
-          <p key={paragraph.slice(0, 20)}>{paragraph}</p>
-        ))}
+        <Markdown>{article}</Markdown>
       </div>
     </section>
   );
 };
-
-AboutMe.propTypes = PropTypes.arrayOf([PropTypes.string]).isRequired;
 
 export default AboutMe;

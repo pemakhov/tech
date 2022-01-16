@@ -1,17 +1,25 @@
 const experience = [
   {
+    name: 'A web interface for JokeAPI',
+    period: 'October 2021',
+    technologies: 'React, React Redux, Redux Toolkit, SCSS',
+    task: 'To create a web interface for some API. Implement search functionality.',
+    result: 'This was the test for React Native Internship. As the result, I was invited to the internship.',
+  },
+  {
     name: 'A resume website',
     period: 'July 2021 — August 2021',
-    technologies: 'React, SCSS',
+    technologies: 'React, SCSS, Markdown',
     task: 'To create a simple resume website',
     result: 'It is completed and used as a resume website (this one, actually)',
   },
   {
-    name: 'Computer science course volunteering',
+    name: 'The Computer science course volunteering',
     period: 'September 2019 — now',
     technologies: 'Java',
     task: 'To conduct a code review for a SH++ programming school student',
-    result: 'A lot of reviews have been conducted.',
+    result:
+      'A lot of reviews have been conducted. I got much deeper understanding of many topics, collections especially.',
   },
   {
     name: 'Telegram-bot, API and admin-panel for a design bureau KBP',

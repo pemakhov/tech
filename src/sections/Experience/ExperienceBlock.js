@@ -8,7 +8,7 @@ const ExperienceBlock = (props) => {
   return (
     <div className="experienceBlock">
       <h4>{name}</h4>
-      <p className="experiencePeriod"><span>Period of development: </span>{period}</p>
+      <p className="experiencePeriod"><span>Development period: </span>{period}</p>
       <p className="experienceTechnologies"><span>Used technologies: </span>{technologies}</p>
       <p className="experienceJob"><span>The task: </span>{task}</p>
       <p className="experienceResult"><span>The result: </span>{result}</p>

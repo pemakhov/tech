@@ -18,10 +18,7 @@ const education = [
     organization: 'ONIX',
     period: 'February 2020 — June 2020',
     scope: 'Node.js, express, Nest.js, JavaScript, TypeScript, MongoDB',
-    certificates: {
-      title: 'Diploma',
-      link: 'https://diploma.programming.org.ua/en/d/6l3pzx4GBMVqgAdr4Ge7ZLak9NQoRvDO',
-    },
+    certificates: null,
   },
   {
     course: 'Web Development. Introduction to Fullstack',

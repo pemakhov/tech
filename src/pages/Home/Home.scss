@@ -239,11 +239,15 @@ h2.greeting {
 
 /* aboutMe */
 #calipers {
-  height: 300px;
+  height: 150px;
   width: 100%;
   background: no-repeat url("/img/calipers.png");
   background-size: contain;
   background-position: center;
+
+  @media (min-width: $minNormalWidth) {
+    height: 300px;
+  }
 }
 
 section.aboutMe {

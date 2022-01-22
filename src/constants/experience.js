@@ -32,7 +32,7 @@ const experience = [
     result: 'The Telegram-bot is hosted on VPS and actively used by the design group',
   },
   {
-    name: 'Telegram-bot and API for a programming school SH++',
+    name: 'Telegram-bot and API for a programming school School++',
     period: 'September 2020 — November 2020',
     technologies: 'Node.js, Redis, Telegram Bot API',
     task: ' To create a Telegram-bot sending messages to the students',

@@ -3,8 +3,12 @@ const experience = [
     name: 'JokeAPI web interface',
     period: 'October 2021',
     technologies: 'React, React Redux, Redux Toolkit, SCSS',
-    task: 'To create a web interface for some API. Implement search functionality.',
-    result: 'I was enrolled to the internship.',
+    task: 'To create a web interface for some API. Implement search functionality',
+    result: 'I was enrolled to the internship',
+    source: {
+      title: 'Link',
+      link: 'http://dev-jokes.pemakhov.tech/',
+    }
   },
   {
     name: 'Business card website',
@@ -12,6 +16,7 @@ const experience = [
     technologies: 'React, SCSS, Markdown',
     task: 'To create a simple business card website',
     result: 'The website is developed and used until now (this one, actually)',
+    source: null,
   },
   {
     name: 'The Computer science course volunteering',
@@ -20,6 +25,7 @@ const experience = [
     task: 'To conduct a code review for a School++ programming school student',
     result:
       'Many reviews were conducted. I got much deeper understanding of many topics, collections especially.',
+    source: null,
   },
   {
     name: 'Telegram-bot, API and admin-panel for a projects design group',
@@ -30,6 +36,10 @@ const experience = [
       'handling. Admin panel for data displaying, editing and ' +
       'deleting for authorized users',
     result: 'The Telegram-bot is hosted on VPS and actively used by the design group',
+    source: {
+      title: 'Admin Panel Link',
+      link: 'http://kbpbot.xyz/',
+    }
   },
   {
     name: 'Telegram-bot and API for a programming school School++',
@@ -37,6 +47,7 @@ const experience = [
     technologies: 'Node.js, Redis, Telegram Bot API',
     task: ' To create a Telegram-bot sending messages to the students',
     result: 'Alpha version completed. The project was frozen by the product owner until other modules are ready',
+    source: null,
   },
 ];
 

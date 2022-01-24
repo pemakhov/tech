@@ -271,6 +271,14 @@ section.experience {
   font-style: normal;
 }
 
+.experienceBlock  a {
+    color: $white;
+}
+
+.experienceBlock  a:hover {
+  text-decoration: none;
+}
+
 .experiencePeriod {
   font-style: italic;
 }
@@ -417,6 +425,14 @@ section.education {
   span {
     font-style: normal;
   }
+}
+
+.educationBlock  a {
+    color: $black;
+}
+
+.educationBlock  a:hover {
+  text-decoration: none;
 }
 
 .educationPeriod {
